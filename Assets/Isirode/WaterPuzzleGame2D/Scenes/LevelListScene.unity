@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   document: {fileID: 0}
-  firstLevelSceneName: Scene1
+  firstLevelSceneName: Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene1
   firstLevelButtonName: FirstLevelButton
 --- !u!1 &989227778
 GameObject:
