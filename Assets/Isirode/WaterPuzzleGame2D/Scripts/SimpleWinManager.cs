@@ -26,6 +26,9 @@ public class SimpleWinManager : MonoBehaviour
 
     public string restartLevelButtonName = "RestartLevelButton";
 
+    public string globalRestartLevelButtonName = "GRestartLevel";
+    public string globalReturnToLevelListButtonName = "GReturnToLevelList";
+
     public LegacyInputController legacyInputController;
 
     public SimpleWaterfall simpleWaterfall;
@@ -116,6 +119,29 @@ public class SimpleWinManager : MonoBehaviour
         {
             Debug.LogWarning($"{nameof(waitForDrawing)} is not set.");
         }
+
+        var globalRestartLevelButton = root.Q<Button>(globalRestartLevelButtonName);
+        if (globalRestartLevelButton != null)
+        {
+            globalRestartLevelButton.RegisterCallback<PointerUpEvent>(RestartLevel);
+        }
+        else
+        {
+            Debug.LogWarning($"{nameof(globalRestartLevelButton)} not found using '{globalRestartLevelButtonName}' name.");
+        }
+
+        var globalReturnToLevelListButton = root.Q<Button>(globalReturnToLevelListButtonName);
+        // TODO : automate this using an extension, specify the container used
+        if (globalReturnToLevelListButton != null)
+        {
+            returnToLevelListButton.RegisterCallback<PointerUpEvent>(ReturnToList);
+        }
+        else
+        {
+            Debug.LogWarning($"{nameof(globalReturnToLevelListButton)} not found using '{globalReturnToLevelListButtonName}' name.");
+        }
+
+        RequireComponent.RequireThrow(this, () => this.lineOwner);
     }
 
     private void RestartLevel(PointerUpEvent evt)

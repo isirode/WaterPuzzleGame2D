@@ -139,7 +139,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8454954996820523214, guid: 0227aeb4b7798364b8c78fa80b0ac1ea, type: 3}
   m_PrefabInstance: {fileID: 1819341917}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1667045100}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6aceb896f6d131b47a054a4964969062, type: 3}
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8454954996820523212, guid: 0227aeb4b7798364b8c78fa80b0ac1ea, type: 3}
   m_PrefabInstance: {fileID: 1819341917}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1667045100}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14e96e480cfc04546a0726f143da7865, type: 3}
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8454954996820523186, guid: 0227aeb4b7798364b8c78fa80b0ac1ea, type: 3}
   m_PrefabInstance: {fileID: 1819341917}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1667045100}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2fc6df17ab0e46c468dd67ad03ec9ca2, type: 3}
@@ -658,6 +658,11 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 3845517732768301474, guid: 2d712b378f02d364293d1e710ce6ee88, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2d712b378f02d364293d1e710ce6ee88, type: 3}
+--- !u!1 &1667045100 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8454954996820523209, guid: 0227aeb4b7798364b8c78fa80b0ac1ea, type: 3}
+  m_PrefabInstance: {fileID: 1819341917}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1747468204
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,6 +1055,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 564811118}
     - target: {fileID: 3996657706129476493, guid: 63719d0ae7d2af44a96d5d673ad900da, type: 3}
+      propertyPath: lineOwner
+      value: 
+      objectReference: {fileID: 1667045100}
+    - target: {fileID: 3996657706129476493, guid: 63719d0ae7d2af44a96d5d673ad900da, type: 3}
       propertyPath: simpleWaterfall
       value: 
       objectReference: {fileID: 1511374375}
@@ -1061,6 +1070,10 @@ PrefabInstance:
       propertyPath: legacyInputController
       value: 
       objectReference: {fileID: 564811122}
+    - target: {fileID: 3996657706129476493, guid: 63719d0ae7d2af44a96d5d673ad900da, type: 3}
+      propertyPath: globalReturnToLevelListButtonName
+      value: GReturnToLevelList
+      objectReference: {fileID: 0}
     - target: {fileID: 3996657706129476494, guid: 63719d0ae7d2af44a96d5d673ad900da, type: 3}
       propertyPath: m_RootOrder
       value: 10

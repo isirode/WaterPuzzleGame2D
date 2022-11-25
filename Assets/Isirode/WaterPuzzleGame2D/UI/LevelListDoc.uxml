@@ -1,5 +1,13 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement>
-        <ui:Button text="First level" display-tooltip-when-elided="true" name="FirstLevelButton" />
+    <Style src="project://database/Assets/Isirode/WaterPuzzleGame2D/UI/USS/LevelList.uss?fileID=7433441132597879392&amp;guid=66de350cb34f1bb489b56687c3aad365&amp;type=3#LevelList" />
+    <ui:VisualElement name="SceneListContainer" class="level_container">
+        <ui:Button text="1" display-tooltip-when-elided="true" name="FirstLevelButton" class="level_button" />
+        <ui:Button text="2" display-tooltip-when-elided="true" class="level_button" />
+        <ui:Button text="3" display-tooltip-when-elided="true" class="level_button" />
+        <ui:Button text="4" display-tooltip-when-elided="true" class="level_button" />
+        <ui:Button text="5" display-tooltip-when-elided="true" class="level_button" />
+        <ui:Button text="6" display-tooltip-when-elided="true" class="level_button" />
+        <ui:Button text="7" display-tooltip-when-elided="true" class="level_button" />
+        <ui:Button text="8" display-tooltip-when-elided="true" class="level_button" />
     </ui:VisualElement>
 </ui:UXML>

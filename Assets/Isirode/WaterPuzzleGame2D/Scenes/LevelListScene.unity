@@ -187,6 +187,8 @@ MonoBehaviour:
   document: {fileID: 0}
   firstLevelSceneName: Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene1
   firstLevelButtonName: FirstLevelButton
+  sceneListContainerName: SceneListContainer
+  scenePathPrefix: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/
 --- !u!1 &989227778
 GameObject:
   m_ObjectHideFlags: 0

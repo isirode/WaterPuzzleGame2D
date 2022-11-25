@@ -1,0 +1,12 @@
+/* This is the style for the document used in game */
+
+.global_section {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.global_section Button {
+	max-width: 40%;
+	max-height: 40%;
+}

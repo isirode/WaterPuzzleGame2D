@@ -14,4 +14,127 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene1.unity
     guid: 25ebcd9d101f769428d01cbd7ae0d4d4
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene2.unity
+    guid: 7c1c09997e74aa840b895c5f0f7dfcca
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene3.unity
+    guid: 0cdbe9db701b46643a30b5550e9c9a32
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene4.unity
+    guid: 577db8a7fd208d145a7deb3ecce30e80
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene5.unity
+    guid: d8d6e86b77be42341baab7fd5d86ea4b
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene5_2.unity
+    guid: 20ee4daf41d58364ab70d03fbaa208e0
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene6.unity
+    guid: e435848bdf465e84ca3f681385553502
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene7.unity
+    guid: c6a426ba24e7f5f4597557fb6f5133bd
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene8.unity
+    guid: d21bd83089168204ab91f8ee528fc4ec
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene9.unity
+    guid: 2ffd939eda7c3ca4a952b9869ddaccf5
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene10.unity
+    guid: 2816b4aeb1d944e4bad81b016f710832
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene11.unity
+    guid: c2e369deb9df0a3448f63503dc8aa15c
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene12.unity
+    guid: a6e45c22782d3a5439c3b0bd9f2f22ba
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene13.unity
+    guid: 34b5419414c77874daf2c7220cf08f74
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene14.unity
+    guid: 37f10a70b5721044fabcf233e60cdf2f
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene15.unity
+    guid: a928b83040a9d524b8c432ca503db192
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene16.unity
+    guid: 931625f7b8bb4224ea261c829eba2fcc
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene17.unity
+    guid: a34deed0e180f21498f6a2b9d5a7064b
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene18.unity
+    guid: e8f6b641115cf4f40ad08a7f1baa99b1
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene19.unity
+    guid: 3404af0645c4f0a4d8188ef9e9377a95
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene20.unity
+    guid: 5b45158023d82974ea7c71e00e963520
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene20_bis_1.unity
+    guid: 9134da796bb97cc43aa377d9a6bf0feb
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene21.unity
+    guid: 7ec765e02f0830349a5e5387338f2db3
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene22.unity
+    guid: 6a6f2b5613fede644b4a10cea69c9ac0
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene23.unity
+    guid: 3444908b9e3fbc54290a1b66c9c911dc
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene24.unity
+    guid: 7eaa16b1fbd7090458c318169a3fd2bd
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene25.unity
+    guid: fcefa89db97f7d34f86d6d247dbe6f93
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene26.unity
+    guid: 0dc25b876d17b4841a58e1a1aa5ea41e
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene27.unity
+    guid: 6eb26026e2de3574ead8689c6967436d
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene28.unity
+    guid: 16bbdafbbe196564b880b1ac0bbd56cb
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene29.unity
+    guid: 59ff9db19843a89418b417e7e1dd2e02
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene30.unity
+    guid: 88cf95259d9cd3e42a245f6f7fee35c3
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene30_bis_1.unity
+    guid: bbec2a5fb3547514bae0e8c7523a561e
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene30_bis_2.unity
+    guid: 5f5d0a7150e9ff04da0d6d340130ac06
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene30_bis_3.unity
+    guid: d4b3acf58dd405f4b8cf5d1cc99e4c8d
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene30_bis_4.unity
+    guid: 3639d680930438146bc1b37a1182d1c8
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene31.unity
+    guid: d298075f7ff1aea49a155a47491c718d
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene32.unity
+    guid: 34e2f88380653444b865b7038ed58092
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene33.unity
+    guid: 8bdb431030fbe9d4e83f85eac1fd8fc8
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene34.unity
+    guid: 809a3d68fb69b18458ec9ddefa3db376
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene35.unity
+    guid: 29d19e2e0e4d50d40be4b42862d4c4be
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene36.unity
+    guid: 6d844a1ed45d00340ab5ec0fe6ff4869
   m_configObjects: {}
