@@ -1,0 +1,7 @@
+# Another .gitignore so that we can easily update the global one
+
+# We are ignoring Mirror's directorys so that it dont pollute the repository
+/Mirror
+/ScriptTemplates
+Mirror.meta
+ScriptTemplates.meta

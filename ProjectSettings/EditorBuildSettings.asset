@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/StartScene.unity
+    guid: c279de99cf6d829499e081ab27ece5bd
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/LevelListScene.unity
+    guid: 2fad171bad7f5e94a98a95e94fca6302
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene1.unity
+    guid: 25ebcd9d101f769428d01cbd7ae0d4d4
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  m_configObjects: {}

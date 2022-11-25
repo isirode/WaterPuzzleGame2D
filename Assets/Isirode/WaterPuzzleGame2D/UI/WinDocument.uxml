@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement>
+        <ui:VisualElement name="WinSection">
+            <ui:Label text="You won !" display-tooltip-when-elided="true" style="-unity-text-align: upper-center;" />
+            <ui:Button text="Return to level list" display-tooltip-when-elided="true" name="ReturnToLevelListButton" />
+        </ui:VisualElement>
+        <ui:VisualElement name="StartDrawingSection">
+            <ui:Label text="Click and drag to start drawing, the level will start after your first drawing" display-tooltip-when-elided="true" style="-unity-text-align: upper-center; white-space: normal;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="LooseSection">
+            <ui:Label text="You have lost !" display-tooltip-when-elided="true" />
+            <ui:Button text="Restart" display-tooltip-when-elided="true" name="RestartLevelButton" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
