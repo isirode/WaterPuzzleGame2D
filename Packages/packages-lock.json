@@ -1,11 +1,11 @@
 {
   "dependencies": {
     "com.isirode.draw-lines-2d": {
-      "version": "https://github.com/isirode/DrawingLines2D.git?path=/Assets/Isirode/DrawingLines2D#0.0.2",
+      "version": "https://github.com/isirode/DrawingLines2D.git?path=/Assets/Isirode/DrawingLines2D#0.0.3",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "a919ba36f8647394b5e31d816823c2290b73efed"
+      "hash": "3cb583347b5054514956beeb9d47e0cee9ba177b"
     },
     "com.isirode.liquid-simulation": {
       "version": "https://github.com/isirode/Liquid-Simulation.git?path=/Assets/Isirode/Liquid-Simulation#0.0.3",

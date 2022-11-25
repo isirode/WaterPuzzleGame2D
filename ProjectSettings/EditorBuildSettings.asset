@@ -137,4 +137,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene36.unity
     guid: 6d844a1ed45d00340ab5ec0fe6ff4869
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/LengthLimiter/LengthLimiterMainScene.unity
+    guid: 9b8a9e514d3a26549b4b058b527980fe
+  - enabled: 1
+    path: Assets/Isirode/WaterPuzzleGame2D/Scenes/LengthLimiter/Levels/Level_1.unity
+    guid: a031881f2be8ead4383ed0205bc77fdf
   m_configObjects: {}

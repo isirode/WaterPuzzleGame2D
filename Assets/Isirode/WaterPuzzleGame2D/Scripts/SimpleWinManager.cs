@@ -38,15 +38,29 @@ public class SimpleWinManager : MonoBehaviour
 
     public GameObject lineOwner;
 
-    void Start()
+    public bool startWithInit = true;
+    private bool wasInit = false;
+
+    private Coroutine awaitingForLooseCoroutine;
+
+    private void Start()
     {
-        // TODO : extension to do this
-        if (waterEnterObjective == null)
+        if (startWithInit)
         {
-            Debug.LogWarning($"{nameof(waterEnterObjective)} should not be null for the {nameof(SimpleWinManager)} to work");
+            Init();
+        }
+    }
+
+    public void Init()
+    {
+        Debug.Log(nameof(Init));
+
+        if (wasInit)
+        {
             return;
         }
-        waterEnterObjective.ObjectiveReached += ObjectiveReached;
+
+        ListenObjective();
 
         if (document == null)
         {
@@ -108,14 +122,7 @@ public class SimpleWinManager : MonoBehaviour
         }
         legacyInputController.LineFinished += LineFinished;
 
-        if (simpleWaterfall == null)
-        {
-            Debug.LogWarning($"{nameof(simpleWaterfall)} should not be null for the {nameof(SimpleWinManager)} to work");
-        }
-        else
-        {
-            simpleWaterfall.SpawningFinished += SpawningFinished;
-        }
+        ListenWaterfall();
 
         if (waitForDrawing == null)
         {
@@ -144,6 +151,32 @@ public class SimpleWinManager : MonoBehaviour
         }
 
         RequireComponent.RequireThrow(this, () => this.lineOwner);
+
+        wasInit = true;
+    }
+
+    public void ListenWaterfall()
+    {
+        if (simpleWaterfall == null)
+        {
+            Debug.LogWarning($"{nameof(simpleWaterfall)} should not be null for the {nameof(SimpleWinManager)} to work");
+        }
+        else
+        {
+            simpleWaterfall.SpawningFinished += SpawningFinished;
+        }
+    }
+
+    public void ListenObjective()
+    {
+        if (waterEnterObjective == null)
+        {
+            Debug.LogWarning($"{nameof(waterEnterObjective)} should not be null for the {nameof(SimpleWinManager)} to work");
+        }
+        else
+        {
+            waterEnterObjective.ObjectiveReached += ObjectiveReached;
+        }
     }
 
     // TODO : use another class than legacyInputController for this maybe
@@ -155,6 +188,12 @@ public class SimpleWinManager : MonoBehaviour
     private void RestartLevel(PointerUpEvent evt)
     {
         Debug.Log(nameof(RestartLevel));
+
+        if (awaitingForLooseCoroutine != null)
+        {
+            StopCoroutine(awaitingForLooseCoroutine);
+            awaitingForLooseCoroutine = null;
+        }
 
         // TODO : do an extension which do this
         winSection.style.display = DisplayStyle.None;
@@ -169,6 +208,9 @@ public class SimpleWinManager : MonoBehaviour
         }
 
         waitForDrawing.Restart();
+
+        waterEnterObjective.ResetState();
+        simpleWaterfall.ResetState(true);
 
         hasStarted = false;
         hasWon = false;
@@ -194,7 +236,7 @@ public class SimpleWinManager : MonoBehaviour
     {
         Debug.Log(nameof(SpawningFinished));
 
-        StartCoroutine(DoLooseAfterSeconds());
+        awaitingForLooseCoroutine = StartCoroutine(DoLooseAfterSeconds());
     }
 
     private IEnumerator DoLooseAfterSeconds()

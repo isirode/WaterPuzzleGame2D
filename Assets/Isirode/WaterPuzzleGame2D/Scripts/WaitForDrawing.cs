@@ -18,8 +18,23 @@ public class WaitForDrawing : MonoBehaviour
     // TODO : add a property gameobject to disable
     // and a way to just top them
 
+    public bool initOnStart = true;
+    private bool wasInit = false;
+
     void Start()
     {
+        if (initOnStart)
+        {
+            Init();
+        }
+    }
+
+    public void Init()
+    {
+        if (wasInit)
+        {
+            return;
+        }
         if (document == null)
         {
             document = GetComponent<UIDocument>();
@@ -49,6 +64,8 @@ public class WaitForDrawing : MonoBehaviour
         {
             Debug.LogWarning($"{nameof(simpleWaterfall)} is not set.");
         }
+
+        wasInit = true;
     }
 
     private void LineAdded(List<Vector3> points, GameObject gameObject)

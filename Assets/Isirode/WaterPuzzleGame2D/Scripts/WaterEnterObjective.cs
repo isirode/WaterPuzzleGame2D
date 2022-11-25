@@ -27,4 +27,10 @@ public class WaterEnterObjective : MonoBehaviour
             ObjectiveReached?.Invoke(gameObject);
         }
     }
+
+    public void ResetState()
+    {
+        counter = 0;
+        objectiveWasReached = false;
+    }
 }
