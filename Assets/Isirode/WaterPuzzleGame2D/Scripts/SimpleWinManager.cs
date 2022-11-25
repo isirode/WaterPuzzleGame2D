@@ -15,6 +15,7 @@ public class SimpleWinManager : MonoBehaviour
     VisualElement winSection;
     public string winSectionName = "WinSection";
 
+    private bool hasStarted = false;
     private bool hasWon = false;
 
     VisualElement looseSection;
@@ -105,6 +106,7 @@ public class SimpleWinManager : MonoBehaviour
         {
             Debug.LogWarning($"{nameof(legacyInputController)} is not set.");
         }
+        legacyInputController.LineFinished += LineFinished;
 
         if (simpleWaterfall == null)
         {
@@ -144,6 +146,12 @@ public class SimpleWinManager : MonoBehaviour
         RequireComponent.RequireThrow(this, () => this.lineOwner);
     }
 
+    // TODO : use another class than legacyInputController for this maybe
+    private void LineFinished(List<Vector3> points)
+    {
+        hasStarted = true;
+    }
+
     private void RestartLevel(PointerUpEvent evt)
     {
         Debug.Log(nameof(RestartLevel));
@@ -161,6 +169,9 @@ public class SimpleWinManager : MonoBehaviour
         }
 
         waitForDrawing.Restart();
+
+        hasStarted = false;
+        hasWon = false;
     }
 
     private void ReturnToList(PointerUpEvent evt)
@@ -191,7 +202,7 @@ public class SimpleWinManager : MonoBehaviour
         yield return new WaitForSeconds(waitTimeBeforeDeclaringLostSeconds);
 
         // TODO : find a way to flatten the condition
-        if (!hasWon)
+        if (!hasWon && hasStarted)
         {
             looseSection.style.display = DisplayStyle.Flex;
 
