@@ -7,3 +7,5 @@ That can be difficult to see that you have not modifie the main prebab, causing 
 Duplicate the scene instead.
 
 Do not set the layer of water particle prebabs, it seem to make the shader water effect to bug.
+
+Some of the scenes could be bugged.
