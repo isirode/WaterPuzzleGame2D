@@ -11,17 +11,23 @@ public class AdditiveLevelManager : MonoBehaviour
     public string additiveRootGameObjectName = "";
 
     private Level currentLevel;
-    private int currentIndex = -1;
     private GameObject additiveRoot;
+    private bool firstLevelWasLoaded = false;
+
+    // Mechanism used to pass the levels to load
+    public static int levelToUse = 1;
+    public int sceneLevelToUseOverride = -1;
 
     public string levelPathPrefix = string.Empty;
 
     // FIXME : duplicated from LevelListController except for "Level"
     private Regex levelNumberRegex = new Regex(@"[\w\d\/\\]{0,}Level_(\d+).unity", RegexOptions.IgnoreCase);
 
+    public TestScriptableObject testScriptableObject;
+
     class Level
     {
-        public string levelNumber;
+        public int levelNumber;
         public string levelPath;
     }
 
@@ -34,10 +40,10 @@ public class AdditiveLevelManager : MonoBehaviour
     {
         Debug.Log(nameof(Start));
 
-        RequireComponent.RequireNotEmptyThrow(this, () => this.levelPathPrefix);
-        RequireComponent.RequireNotEmptyThrow(this, () => this.additiveRootGameObjectName);
-        RequireComponent.RequireThrow(this, () => this.simpleWinManager);
-        RequireComponent.RequireThrow(this, () => this.waitForDrawing);
+        RequireComponent.RequireNotEmptyThrow(this, this.levelPathPrefix);
+        RequireComponent.RequireNotEmptyThrow(this, this.additiveRootGameObjectName);
+        RequireComponent.RequireThrow(this, this.simpleWinManager);
+        RequireComponent.RequireThrow(this, this.waitForDrawing);
 
         int sceneCount = SceneManager.sceneCountInBuildSettings;
         string[] scenes = new string[sceneCount];
@@ -59,9 +65,11 @@ public class AdditiveLevelManager : MonoBehaviour
 
                     var levelNumber = match.Groups[1].Value;
 
+                    var levelNumberAsInt = int.Parse(levelNumber);
+
                     var level = new Level()
                     {
-                        levelNumber = levelNumber,
+                        levelNumber = levelNumberAsInt,
                         levelPath = scenePath
                     };
 
@@ -71,20 +79,53 @@ public class AdditiveLevelManager : MonoBehaviour
         }
         Debug.Log($"{levels.Count} levels added");
 
-        StartCoroutine(LoadNextLevel());
-    }
-
-    public IEnumerator LoadNextLevel()
-    {
-        Destroy(additiveRoot);
-        currentIndex += 1;
-        if (currentIndex >= levels.Count)
+        if (sceneLevelToUseOverride > 0)
         {
-            // TODO : make optional to quit the additive scenes
-            currentIndex = 0;
+            currentLevel = levels[sceneLevelToUseOverride - 1];
+            if (levelToUse != 1)
+            {
+                Debug.LogWarning($"using {sceneLevelToUseOverride} ({sceneLevelToUseOverride}) but {nameof(levelToUse)} ({levelToUse}) is set");
+            }
+        }
+        else
+        {
+            currentLevel = levels[levelToUse - 1];
         }
 
-        currentLevel = levels[currentIndex];
+        simpleWinManager.NextLevelRequested += OnNextLevelRequested;
+
+        StartCoroutine(LoadNextLevel(false));
+
+        Debug.Log(testScriptableObject.sceneAsset);
+        Debug.Log(testScriptableObject.sceneAsset.name);
+    }
+
+    private void OnNextLevelRequested()
+    {
+        StartCoroutine(LoadNextLevel(true));
+    }
+
+    public IEnumerator LoadNextLevel(bool doIncrement)
+    {
+        Destroy(additiveRoot);
+        if (firstLevelWasLoaded)
+        {
+            SceneManager.UnloadSceneAsync(currentLevel.levelPath);
+        }
+
+        if (doIncrement)
+        {
+            var currentIndex = currentLevel.levelNumber - 1;
+            currentIndex += 1;
+            if (currentIndex >= levels.Count)
+            {
+                // TODO : make optional to quit the additive scenes
+                currentIndex = 0;
+            }
+
+            currentLevel = levels[currentIndex];
+        }
+        
         /*var parameters = new LoadSceneParameters()
         {
             loadSceneMode = LoadSceneMode.Additive,
@@ -130,5 +171,9 @@ public class AdditiveLevelManager : MonoBehaviour
         simpleWinManager.Init();
         simpleWinManager.ListenObjective();
         simpleWinManager.ListenWaterfall();
+
+        simpleWinManager.RestartLevel();
+
+        firstLevelWasLoaded = true;
     }
 }

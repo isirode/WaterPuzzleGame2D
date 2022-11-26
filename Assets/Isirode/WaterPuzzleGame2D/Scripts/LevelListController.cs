@@ -62,28 +62,19 @@ public class LevelListController : MonoBehaviour
             return;
         }
 
-        Debug.Log("Prefix : " + scenePathPrefix);
-
         int sceneCount = SceneManager.sceneCountInBuildSettings;
         string[] scenes = new string[sceneCount];
 
         for (int i = 0; i < sceneCount; i++)
         {
             var scenePath = SceneUtility.GetScenePathByBuildIndex(i);
-            Debug.Log("Starts with " + scenePath.StartsWith(scenePathPrefix));
             if (scenePath.StartsWith(scenePathPrefix) && !scenePath.Contains("bis"))
             {
                 Match match = levelNumberRegex.Match(scenePath);
                 if (match.Groups.Count > 1 && match.Success)
                 {
-                    Debug.Log($"Groups {match.Groups.Count}");
-
+                    // Info : the captured group is the second group
                     var levelNumber = match.Groups[1].Value;
-
-                    Debug.Log("value : " + levelNumber);
-                    Debug.Log("value : " + match.Groups[0]);
-                    Debug.Log("value : " + match.Groups[1]);
-                    Debug.Log("value : " + match);
 
                     var button = new Button();
                     button.text = levelNumber;
@@ -95,8 +86,6 @@ public class LevelListController : MonoBehaviour
                     button.RegisterCallback<PointerUpEvent, string>(LoadLevel, scenePath);
                 }
             }
-            Debug.Log(scenePath);
-            Debug.Log(scenePathPrefix);
         }
     }
 

@@ -15,11 +15,11 @@
       "hash": "28745bf9a2bfca1c6720e48e04a342fbe76c88c0"
     },
     "com.isirode.liquid-simulation-extension": {
-      "version": "https://github.com/isirode/LiquidSimulationExtension.git?path=/Assets/Isirode/LiquidSimulationExtension#0.0.4",
+      "version": "https://github.com/isirode/LiquidSimulationExtension.git?path=/Assets/Isirode/LiquidSimulationExtension#0.0.5",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "198d815394aaf52c248e14f8221103811a3ccf8d"
+      "hash": "c5ebf52df4667117bfd7d9ceded4aa8e687e6950"
     },
     "com.isirode.unity-2d-controllers": {
       "version": "https://github.com/isirode/Unity2DControllers.git?path=/Assets/Isirode/Unity2DControllers#0.0.1",

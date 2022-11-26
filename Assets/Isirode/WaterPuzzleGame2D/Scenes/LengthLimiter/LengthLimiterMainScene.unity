@@ -453,6 +453,7 @@ MonoBehaviour:
   looseSectionName: LooseSection
   waitTimeBeforeDeclaringLostSeconds: 10
   returnToLevelListButtonName: ReturnToLevelListButton
+  nextLevelButtonName: NextLevelButton
   restartLevelButtonName: RestartLevelButton
   globalRestartLevelButtonName: GRestartLevel
   globalReturnToLevelListButtonName: GReturnToLevelList
@@ -477,6 +478,7 @@ MonoBehaviour:
   startDrawingSectionName: StartDrawingSection
   basicLineController: {fileID: 268746812}
   simpleWaterfall: {fileID: 0}
+  initOnStart: 1
 --- !u!114 &1343260920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,7 +492,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   additiveRootGameObjectName: AdditiveRoot
+  sceneLevelToUseOverride: -1
   levelPathPrefix: Assets/Isirode/WaterPuzzleGame2D/Scenes/LengthLimiter/Levels
+  testScriptableObject: {fileID: 11400000, guid: 5b0a65b857e258942b2f2d12102e635d, type: 2}
   simpleWinManager: {fileID: 1343260918}
   waitForDrawing: {fileID: 1343260919}
 --- !u!1 &1480779467

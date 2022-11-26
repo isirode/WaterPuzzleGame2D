@@ -70,6 +70,20 @@ public class WaitForDrawing : MonoBehaviour
 
     private void LineAdded(List<Vector3> points, GameObject gameObject)
     {
+        basicLineController.enabled = false;
+
+        StartWaterfall();
+    }
+
+    public void Restart()
+    {
+        basicLineController.enabled = true;
+
+        StopWaterfall();
+    }
+
+    private void StartWaterfall()
+    {
         if (simpleWaterfall != null)
         {
             simpleWaterfall.enabled = true;
@@ -81,7 +95,7 @@ public class WaitForDrawing : MonoBehaviour
         }
     }
 
-    public void Restart()
+    private void StopWaterfall()
     {
         simpleWaterfall.enabled = false;
         simpleWaterfall.ResetState(true);

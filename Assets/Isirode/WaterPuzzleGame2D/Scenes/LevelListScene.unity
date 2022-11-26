@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 153388498}
   - component: {fileID: 153388497}
   - component: {fileID: 153388499}
+  - component: {fileID: 153388500}
   m_Layer: 5
   m_Name: UIDocument
   m_TagString: Untagged
@@ -189,6 +190,23 @@ MonoBehaviour:
   firstLevelButtonName: FirstLevelButton
   sceneListContainerName: SceneListContainer
   scenePathPrefix: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/
+--- !u!114 &153388500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153388496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba939dadb714610499bfa70db19dcc3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  document: {fileID: 0}
+  levelListContainerName: LengthLimiterContainer
+  levelPathPrefix: Assets/Isirode/WaterPuzzleGame2D/Scenes/LengthLimiter/Levels
+  levelNumberRegexString: '[\w\d\/\\]{0,}Level_(\d+).unity'
+  mainAdditiveScenePath: Assets/Isirode/WaterPuzzleGame2D/Scenes/LengthLimiter/LengthLimiterMainScene.unity
 --- !u!1 &989227778
 GameObject:
   m_ObjectHideFlags: 0

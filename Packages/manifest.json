@@ -2,7 +2,7 @@
   "dependencies": {
     "com.isirode.draw-lines-2d": "https://github.com/isirode/DrawingLines2D.git?path=/Assets/Isirode/DrawingLines2D#0.0.3",
     "com.isirode.liquid-simulation": "https://github.com/isirode/Liquid-Simulation.git?path=/Assets/Isirode/Liquid-Simulation#0.0.3",
-    "com.isirode.liquid-simulation-extension": "https://github.com/isirode/LiquidSimulationExtension.git?path=/Assets/Isirode/LiquidSimulationExtension#0.0.4",
+    "com.isirode.liquid-simulation-extension": "https://github.com/isirode/LiquidSimulationExtension.git?path=/Assets/Isirode/LiquidSimulationExtension#0.0.5",
     "com.isirode.unity-2d-controllers": "https://github.com/isirode/Unity2DControllers.git?path=/Assets/Isirode/Unity2DControllers#0.0.1",
     "com.unity.collab-proxy": "1.17.2",
     "com.unity.feature.2d": "1.0.0",
