@@ -4,7 +4,7 @@ This is a puzzle game in which you need to draw the lines in a way that will dir
 
 There is about 40 puzzles for now.
 
-To play it, I've made a [Github Pages repository](https://github.com/isirode/WaterPuzzleGame2DDemo), [this is](https://isirode.github.io/WaterPuzzleGame2DDemo) the URL of the game.
+To play it, I've made a [Github Pages repository](https://github.com/isirode/WaterPuzzleGame2DDemo), you can play it [here](https://isirode.github.io/WaterPuzzleGame2DDemo).
 
 ## Running the project
 
