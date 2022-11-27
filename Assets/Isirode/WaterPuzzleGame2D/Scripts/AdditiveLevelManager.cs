@@ -23,8 +23,6 @@ public class AdditiveLevelManager : MonoBehaviour
     // FIXME : duplicated from LevelListController except for "Level"
     private Regex levelNumberRegex = new Regex(@"[\w\d\/\\]{0,}Level_(\d+).unity", RegexOptions.IgnoreCase);
 
-    public TestScriptableObject testScriptableObject;
-
     class Level
     {
         public int levelNumber;
@@ -95,9 +93,6 @@ public class AdditiveLevelManager : MonoBehaviour
         simpleWinManager.NextLevelRequested += OnNextLevelRequested;
 
         StartCoroutine(LoadNextLevel(false));
-
-        Debug.Log(testScriptableObject.sceneAsset);
-        Debug.Log(testScriptableObject.sceneAsset.name);
     }
 
     private void OnNextLevelRequested()
