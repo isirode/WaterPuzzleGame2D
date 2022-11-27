@@ -30,6 +30,12 @@ Some of the scenes could be bugged.
 
 There is a water bug, where the shader is not applied anymore, in some scenes, it was fixed in the later scenes, but it still need to be done in the first scenes.
 
+The UI is in a very beta phase.
+
+The "back" button does not seem to be working in some scenes.
+
+It is possible to draw multiple times, but it should not be.
+
 ## Partitipating
 
 Open the [DEVELOPER.md](./DEVELOPER.md) section.
