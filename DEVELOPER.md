@@ -37,4 +37,5 @@ Could use a asset system.
 ## Bug fixing
 
 - [ ] Lines are not displaying correctly when the water is displayed correctly
-
+- [ ] Fix the links of the dependencies in the README.md
+- [ ] Give appropriate credits
