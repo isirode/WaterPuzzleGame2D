@@ -16,29 +16,15 @@ public class StartSceneController : MonoBehaviour
     public string playButtonName = "PlayButton";
     public string settingsButtonName = "SettingsButton";
 
-    // Start is called before the first frame update
     void Start()
     {
-        if (document == null)
-        {
-            document = GetComponent<UIDocument>();
-            if (document == null)
-            {
-                Debug.LogWarning($"{nameof(document)} is not set.");
-                return;
-            }
-            root = document.rootVisualElement;
-        }
-        // menu.RegisterCallback<PointerLeaveEvent>(HideMenu);
-        var playButton = root.Q<Button>(playButtonName);
-        if (playButton != null) 
-        {
-            playButton.RegisterCallback<PointerUpEvent>(DoPlay);
-        }
-        else
-        {
-            Debug.LogWarning($"{nameof(playButton)} not found using '{playButtonName}' name.");
-        }
+        RequireComponent.AssignIfNotSet(this, ref document);
+        RequireComponent.RequireThrow(this, document);
+
+        root = document.rootVisualElement;
+
+        var playButton = root.QR<Button>(playButtonName);
+        playButton.RegisterCallback<PointerUpEvent>(DoPlay);
 
         // FIXME : is this the better place for this
         var levelManager = LevelManager.getInstance();
@@ -47,14 +33,6 @@ public class StartSceneController : MonoBehaviour
 
     private void DoPlay(PointerUpEvent evt)
     {
-        Debug.Log("Play");
-        if (string.IsNullOrEmpty(playSceneName))
-        {
-            // TODO : do the checks in the Start method
-            Debug.LogWarning($"{nameof(playSceneName)} is null or empy.");
-            return;
-        }
-
-        SceneManager.LoadScene(playSceneName, LoadSceneMode.Single);
+        LevelManager.getInstance().GoToLevellListScene();
     }
 }

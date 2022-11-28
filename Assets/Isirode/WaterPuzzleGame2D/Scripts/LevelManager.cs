@@ -24,12 +24,13 @@ public class LevelManager
     // TODO : make it private
     public string levelListSceneName = string.Empty;
 
-    public void ReturnToLevellListScene()
+    public void GoToLevellListScene()
     {
+        Debug.Log(nameof(GoToLevellListScene));
         if (levelListSceneName == string.Empty)
         {
-            // TODO : add a log here
-            // we cannot use Debug.Log
+            // TODO : use something else than Debug.LogWarning
+            Debug.LogWarning($"{nameof(levelListSceneName)} is empty");
             return;
         }
         SceneManager.LoadScene(levelListSceneName, LoadSceneMode.Single);

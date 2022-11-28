@@ -86,46 +86,17 @@ public class SimpleWinManager : MonoBehaviour
         winSection = root.QR<VisualElement>(winSectionName);
         winSection.style.display = DisplayStyle.None;
 
-        looseSection = root.Q<VisualElement>(looseSectionName);
-        if (looseSection != null)
-        {
-            // winSection.RegisterCallback<PointerUpEvent>(DoPlay);
-        }
-        else
-        {
-            Debug.LogWarning($"{nameof(looseSection)} not found using '{looseSectionName}' name.");
-        }
+        looseSection = root.QR<VisualElement>(looseSectionName);
         looseSection.style.display = DisplayStyle.None;
 
-        var returnToLevelListButton = winSection.Q<Button>(returnToLevelListButtonName);
-        if (returnToLevelListButton != null)
-        {
-            returnToLevelListButton.RegisterCallback<PointerUpEvent>(ReturnToList);
-        }
-        else
-        {
-            Debug.LogWarning($"{nameof(returnToLevelListButton)} not found using '{returnToLevelListButtonName}' name.");
-        }
+        var returnToLevelListButton = winSection.QR<Button>(returnToLevelListButtonName);
+        returnToLevelListButton.RegisterCallback<PointerUpEvent>(ReturnToLevelList);
 
-        var nextLeveLButton = winSection.Q<Button>(nextLevelButtonName);
-        if (nextLeveLButton != null)
-        {
-            nextLeveLButton.RegisterCallback<PointerUpEvent>(NextLevel);
-        }
-        else
-        {
-            Debug.LogWarning($"{nameof(nextLeveLButton)} not found using '{nextLevelButtonName}' name.");
-        }
+        var nextLeveLButton = winSection.QR<Button>(nextLevelButtonName);
+        nextLeveLButton.RegisterCallback<PointerUpEvent>(NextLevel);
 
-        var restartLevelButton = looseSection.Q<Button>(restartLevelButtonName);
-        if (restartLevelButton != null)
-        {
-            restartLevelButton.RegisterCallback<PointerUpEvent>(RestartLevel);
-        }
-        else
-        {
-            Debug.LogWarning($"{nameof(restartLevelButton)} not found using '{restartLevelButtonName}' name.");
-        }
+        var restartLevelButton = looseSection.QR<Button>(restartLevelButtonName);
+        restartLevelButton.RegisterCallback<PointerUpEvent>(RestartLevel);
 
         if (legacyInputController == null)
         {
@@ -140,26 +111,11 @@ public class SimpleWinManager : MonoBehaviour
             Debug.LogWarning($"{nameof(waitForDrawing)} is not set.");
         }
 
-        var globalRestartLevelButton = root.Q<Button>(globalRestartLevelButtonName);
-        if (globalRestartLevelButton != null)
-        {
-            globalRestartLevelButton.RegisterCallback<PointerUpEvent>(RestartLevel);
-        }
-        else
-        {
-            Debug.LogWarning($"{nameof(globalRestartLevelButton)} not found using '{globalRestartLevelButtonName}' name.");
-        }
+        var globalRestartLevelButton = root.QR<Button>(globalRestartLevelButtonName);
+        globalRestartLevelButton.RegisterCallback<PointerUpEvent>(RestartLevel);
 
-        var globalReturnToLevelListButton = root.Q<Button>(globalReturnToLevelListButtonName);
-        // TODO : automate this using an extension, specify the container used
-        if (globalReturnToLevelListButton != null)
-        {
-            returnToLevelListButton.RegisterCallback<PointerUpEvent>(ReturnToList);
-        }
-        else
-        {
-            Debug.LogWarning($"{nameof(globalReturnToLevelListButton)} not found using '{globalReturnToLevelListButtonName}' name.");
-        }
+        var globalReturnToLevelListButton = root.QR<Button>(globalReturnToLevelListButtonName);
+        globalReturnToLevelListButton.RegisterCallback<PointerUpEvent>(ReturnToLevelList);
 
         RequireComponent.RequireThrow(this, this.lineOwner);
 
@@ -226,9 +182,10 @@ public class SimpleWinManager : MonoBehaviour
         Debug.Log($"coroutine : {awaitingForLooseCoroutine}");
     }
 
-    private void ReturnToList(PointerUpEvent evt)
+    private void ReturnToLevelList(PointerUpEvent evt)
     {
-        LevelManager.getInstance().ReturnToLevellListScene();
+        Debug.Log(nameof(ReturnToLevelList));
+        LevelManager.getInstance().GoToLevellListScene();
     }
 
     // FIXME : it is done this way for now so that there are not circular references between the additive level manager and this class
