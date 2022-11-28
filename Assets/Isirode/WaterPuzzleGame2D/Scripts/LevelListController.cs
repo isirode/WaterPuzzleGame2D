@@ -23,44 +23,17 @@ public class LevelListController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (document == null)
-        {
-            document = GetComponent<UIDocument>();
-            if (document == null)
-            {
-                Debug.LogWarning($"{nameof(document)} is not set.");
-                return;
-            }
-            root = document.rootVisualElement;
-        }
-        // menu.RegisterCallback<PointerLeaveEvent>(HideMenu);
-        /*
-        var firstLevelButton = root.Q<Button>(firstLevelButtonName);
-        if (firstLevelButton != null)
-        {
-            firstLevelButton.RegisterCallback<PointerUpEvent>(DoPlay);
-        }
-        else
-        {
-            Debug.LogWarning($"{nameof(firstLevelButton)} not found using '{firstLevelButtonName}' name.");
-        }
-        */
+        RequireComponent.AssignIfNotSet(this, ref document);
+        RequireComponent.RequireThrow(this, document);
 
-        var sceneListContainer = root.Q<VisualElement>(sceneListContainerName);
-        if (sceneListContainer == null)
-        {
-            Debug.LogWarning($"{nameof(sceneListContainer)} not found using '{sceneListContainerName}' name.");
-            return;
-        }
+        root = document.rootVisualElement;
+
+        var sceneListContainer = root.QR<VisualElement>(sceneListContainerName);
 
         // Info : we clear it because the document has children so that we can test it in the UI Builder
         sceneListContainer.Clear();
 
-        if (scenePathPrefix == string.Empty)
-        {
-            Debug.LogWarning($"{nameof(scenePathPrefix)} is empty.");
-            return;
-        }
+        RequireComponent.RequireNotEmptyThrow(this, scenePathPrefix);
 
         int sceneCount = SceneManager.sceneCountInBuildSettings;
         string[] scenes = new string[sceneCount];
