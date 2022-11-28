@@ -36,7 +36,6 @@ public class LevelListController : MonoBehaviour
         RequireComponent.RequireNotEmptyThrow(this, scenePathPrefix);
 
         int sceneCount = SceneManager.sceneCountInBuildSettings;
-        string[] scenes = new string[sceneCount];
 
         for (int i = 0; i < sceneCount; i++)
         {
