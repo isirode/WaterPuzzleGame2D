@@ -194,6 +194,8 @@ public class SimpleWinManager : MonoBehaviour
     private void LineFinished(List<Vector3> points)
     {
         hasStarted = true;
+
+        legacyInputController.enabled = false;
     }
 
     private void RestartLevel(PointerUpEvent evt)
