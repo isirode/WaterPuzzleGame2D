@@ -34,6 +34,8 @@ Level management:
 Level system should be distinct that of the scenes.
 Could use a asset system.
 
+Fixme : the next level system for the normal scenes level was made promptly -> it required to be done properly
+
 ## Bug fixing
 
 - [ ] Lines are not displaying correctly when the water is displayed correctly
