@@ -1,5 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement style="width: 50%; height: 100%;">
+    <Style src="project://database/Assets/Isirode/WaterPuzzleGame2D/UI/USS/StartMenu.uss?fileID=7433441132597879392&amp;guid=bee40161596aa2349a4b9b254ba9862f&amp;type=3#StartMenu" />
+    <ui:VisualElement class="menu_container" style="width: 50%; height: 100%;">
         <ui:Button text="Play" display-tooltip-when-elided="true" name="PlayButton" />
         <ui:Button text="Settings" display-tooltip-when-elided="true" focusable="true" name="SettingsButton" />
     </ui:VisualElement>

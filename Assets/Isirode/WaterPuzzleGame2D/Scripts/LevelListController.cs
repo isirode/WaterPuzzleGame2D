@@ -20,6 +20,14 @@ public class LevelListController : MonoBehaviour
 
     private Regex levelNumberRegex = new Regex(@"[\w\d\/\\]{0,}Scene(\d+).unity", RegexOptions.IgnoreCase);
 
+    public static Level currentLevel;
+
+    public class Level
+    {
+        public int levelNumber;
+        public string levelPath;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,16 +54,23 @@ public class LevelListController : MonoBehaviour
                 if (match.Groups.Count > 1 && match.Success)
                 {
                     // Info : the captured group is the second group
-                    var levelNumber = match.Groups[1].Value;
+                    var levelNumberAsString = match.Groups[1].Value;
+                    var levelNumber = int.Parse(levelNumberAsString);
 
                     var button = new Button();
-                    button.text = levelNumber;
+                    button.text = levelNumberAsString;
                     button.AddToClassList("level");
                     button.AddToClassList("level_button");
 
                     sceneListContainer.Add(button);
 
-                    button.RegisterCallback<PointerUpEvent, string>(LoadLevel, scenePath);
+                    var level = new Level()
+                    {
+                        levelNumber = levelNumber,
+                        levelPath = scenePath
+                    };
+
+                    button.RegisterCallback<PointerUpEvent, Level>(LoadLevel, level);
                 }
             }
         }
@@ -74,16 +89,12 @@ public class LevelListController : MonoBehaviour
         SceneManager.LoadScene(firstLevelSceneName, LoadSceneMode.Single);
     }
 
-    private void LoadLevel(PointerUpEvent evt, string scenePath)
+    private void LoadLevel(PointerUpEvent evt, Level level)
     {
         Debug.Log(nameof(LoadLevel));
-        if (string.IsNullOrEmpty(scenePath))
-        {
-            // TODO : do the checks in the Start method
-            Debug.LogWarning($"{nameof(scenePath)} is null or empy.");
-            return;
-        }
 
-        SceneManager.LoadScene(scenePath, LoadSceneMode.Single);
+        currentLevel = level;
+
+        SceneManager.LoadScene(level.levelPath, LoadSceneMode.Single);
     }
 }

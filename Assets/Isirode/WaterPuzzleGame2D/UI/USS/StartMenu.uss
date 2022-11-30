@@ -1,0 +1,13 @@
+/* USS document for the start menu */
+
+.menu_container {
+	justify-content: center;
+	align-items: center;
+	/* WARNING : does not exist in Unity UI Toolkit */
+	/* row-gap: 10px; */
+}
+
+.menu_container .unity-text-element {
+	min-width: 75%;
+	margin-bottom: 10px;
+}

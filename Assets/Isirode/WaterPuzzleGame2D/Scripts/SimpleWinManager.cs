@@ -50,6 +50,8 @@ public class SimpleWinManager : MonoBehaviour
     public delegate void NextLevelRequestDelegate();
     public event NextLevelRequestDelegate NextLevelRequested;
 
+    private NormalSceneManager normalSceneManager = new NormalSceneManager();
+
     private void Start()
     {
         if (startWithInit)
@@ -200,6 +202,12 @@ public class SimpleWinManager : MonoBehaviour
         StopCoroutines();
 
         NextLevelRequested?.Invoke();
+
+        // FIXME : this is a quickfix
+        if (NextLevelRequested == null)
+        {
+            normalSceneManager.MoveToNextLevel(LevelListController.currentLevel.levelNumber);
+        }
     }
 
     private void ObjectiveReached(GameObject gameObject)
