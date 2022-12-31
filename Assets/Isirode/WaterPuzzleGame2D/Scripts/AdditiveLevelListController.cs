@@ -55,8 +55,11 @@ public class AdditiveLevelListController : MonoBehaviour
             var scenePath = SceneUtility.GetScenePathByBuildIndex(i);
             Debug.Log("scenePath " + scenePath);
             Debug.Log("Starts with " + scenePath.StartsWith(levelPathPrefix));
+            Debug.Log("levelPathPrefix " + levelPathPrefix);
             if (scenePath.StartsWith(levelPathPrefix) && !scenePath.Contains("bis"))
             {
+                Debug.Log("scenePath " + scenePath);
+
                 Match match = levelNumberRegex.Match(scenePath);
                 if (match.Groups.Count > 1 && match.Success)
                 {

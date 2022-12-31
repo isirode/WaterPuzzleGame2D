@@ -133,8 +133,8 @@ GameObject:
   m_Component:
   - component: {fileID: 153388498}
   - component: {fileID: 153388497}
-  - component: {fileID: 153388499}
   - component: {fileID: 153388500}
+  - component: {fileID: 153388501}
   m_Layer: 5
   m_Name: UIDocument
   m_TagString: Untagged
@@ -173,23 +173,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &153388499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153388496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dbc34bde351d834b91c10a0c9a8569e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  document: {fileID: 0}
-  firstLevelSceneName: Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene1
-  firstLevelButtonName: FirstLevelButton
-  sceneListContainerName: SceneListContainer
-  scenePathPrefix: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/
 --- !u!114 &153388500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,6 +190,23 @@ MonoBehaviour:
   levelPathPrefix: Assets/Isirode/WaterPuzzleGame2D/Scenes/LengthLimiter/Levels
   levelNumberRegexString: '[\w\d\/\\]{0,}Level_(\d+).unity'
   mainAdditiveScenePath: Assets/Isirode/WaterPuzzleGame2D/Scenes/LengthLimiter/LengthLimiterMainScene.unity
+--- !u!114 &153388501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153388496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba939dadb714610499bfa70db19dcc3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  document: {fileID: 0}
+  levelListContainerName: DistanceLimiterContainer
+  levelPathPrefix: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Levels
+  levelNumberRegexString: '[\w\d\/\\]{0,}Level_(\d+).unity'
+  mainAdditiveScenePath: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/MainScene.unity
 --- !u!1 &989227778
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,3 +291,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1334403216
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1334403217}
+  - component: {fileID: 1334403218}
+  m_Layer: 0
+  m_Name: FormerUIDocument
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1334403217
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334403216}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.68397814, y: 0.16040304, z: 0.033545177}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1334403218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334403216}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dbc34bde351d834b91c10a0c9a8569e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  document: {fileID: 0}
+  firstLevelSceneName: Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/Scene1
+  firstLevelButtonName: FirstLevelButton
+  sceneListContainerName: DistanceLimiterContainer
+  scenePathPrefix: Assets/Isirode/WaterPuzzleGame2D/Scenes/DistanceLimiter/
