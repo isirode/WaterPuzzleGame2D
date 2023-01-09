@@ -36,6 +36,13 @@ Could use a asset system.
 
 Fixme : the next level system for the normal scenes level was made promptly -> it required to be done properly
 
+## TODO
+
+- [ ] Use the LevelSystem library
+- [ ] Fix the Mirror issue
+  - [ ] Put the Mirror example in a separate project
+  - [ ] Fork Mirror, export it as a Git dependency (not currently possible since there is not package.json file as the root)
+
 ## Bug fixing
 
 - [ ] Lines are not displaying correctly when the water is displayed correctly
