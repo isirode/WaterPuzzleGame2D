@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.coffee.git-dependency-resolver": {
+      "version": "https://github.com/mob-sakai/GitDependencyResolverForUnity.git#2.0.0",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "d4fc38c92fb139b4184912f20556ab27a3b519fa"
+    },
     "com.isirode.draw-lines-2d": {
       "version": "https://github.com/isirode/DrawingLines2D.git?path=/Assets/Isirode/DrawingLines2D#0.0.3",
       "depth": 0,
@@ -8,18 +15,17 @@
       "hash": "3cb583347b5054514956beeb9d47e0cee9ba177b"
     },
     "com.isirode.liquid-simulation": {
-      "version": "https://github.com/isirode/Liquid-Simulation.git?path=/Assets/Isirode/Liquid-Simulation#0.0.3",
+      "version": "file:.com.isirode.liquid-simulation@0.0.3",
       "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "28745bf9a2bfca1c6720e48e04a342fbe76c88c0"
+      "source": "embedded",
+      "dependencies": {}
     },
     "com.isirode.liquid-simulation-extension": {
-      "version": "https://github.com/isirode/LiquidSimulationExtension.git?path=/Assets/Isirode/LiquidSimulationExtension#0.0.5",
+      "version": "https://github.com/isirode/LiquidSimulationExtension.git?path=/Assets/Isirode/LiquidSimulationExtension#0.0.8",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "c5ebf52df4667117bfd7d9ceded4aa8e687e6950"
+      "hash": "a53f933b3e4818c5e4807364647955d49204991e"
     },
     "com.isirode.unity-2d-controllers": {
       "version": "https://github.com/isirode/Unity2DControllers.git?path=/Assets/Isirode/Unity2DControllers#0.0.1",

@@ -71,3 +71,9 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# We are excluding Packages subfolders because mob-sakai/GitDependencyResolverForUnity is adding Git sub-dependency packages there (in full)
+/Packages
+!/Packages/manifest.json
+!/Packages/packages-lock.git.json
+!/Packages/packages-lock.json
