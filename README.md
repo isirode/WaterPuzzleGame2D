@@ -10,11 +10,20 @@ To play it, I've made a [Github Pages repository](https://github.com/isirode/Wat
 
 You can open the repository from the Unity hub, once you pulled it.
 
+It will indicate a warning, it is because Mirror is imported as an asset, but I excluded it from Git so that it does not pollute the project.
+
+In the project, you will have errors, ignore the ones about Mirror.
+
+Import it as an Asset : Version 2022.10.0 - November 10, 2022
+
 ### Dependencies
 
-* Miror
-* Liquid-Simulation
+* [mob-sakai/GitDependencyResolverForUnity](https://github.com/mob-sakai/GitDependencyResolverForUnity)
+  * It what I use to resolve Git sub-dependencies
+  * It might have an infinite loop dependency import problem (I had it, I did not manage to reproduce it, it is reported on the issue tracker of it)
+* Mirror
 * LiquidSimulationExtension
+  * Liquid-Simulation
 * Unity2DControllers
 * DrawingLines2D
 
@@ -28,7 +37,9 @@ Do not set the layer of water particle prebabs, it seem to make the shader water
 
 Some of the scenes could be bugged.
 
-There is a water bug, where the shader is not applied anymore, in some scenes, it was fixed in the later scenes, but it still need to be done in the first scenes.
+~~There is a water bug, where the shader is not applied anymore, in some scenes, it was fixed in the later scenes, but it still need to be done in the first scenes.~~ It should not be the case anymore, but I will let it there in case I see it again.
+
+The water shader is displaying the outline of the water particles (a circle), I can fix it but then, some of the lines are not displayed anymore.
 
 The UI is in a very beta phase.
 
