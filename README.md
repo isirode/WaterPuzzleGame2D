@@ -2,9 +2,27 @@
 
 This is a puzzle game in which you need to draw the lines in a way that will direct them toward the goal, the blue hexagonal tile.
 
-There is about 40 puzzles for now.
+You will draw lines with physics enabled, and solve the problems of each levels.
+
+There is about 40 puzzles for now. Some of the levels require problem solving, some require precision drawing.
+
+There is two problem types for now:
+* ones where the distance from the starting draw point and the last point is limited, but the overall length is not
+* ones where the total length of the drawing is limited
+
+There is a starting point (a waterfall), and an endpoint (the hexagonal tile), a certain amount of water particles need to reach the endpoint to validate the level.
 
 To play it, I've made a [Github Pages repository](https://github.com/isirode/WaterPuzzleGame2DDemo), you can play it [here](https://isirode.github.io/WaterPuzzleGame2DDemo).
+
+![Smiley Scene](./Documentation/Resources/SmileyScene.PNG)
+
+An example, below, of an harder level:
+
+![Harder Level](./Documentation/Resources/HarderLevel.PNG)
+
+Since the lines are not static, the line line will fall, and there is no support points to support the line, furthermore, the endpoint is elevated against the direction of the falling water particles.
+
+But if you do the levels in order, you should be able to find out how to solve it.
 
 ## Running the project
 
