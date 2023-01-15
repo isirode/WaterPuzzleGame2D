@@ -4,6 +4,7 @@
     "com.isirode.draw-lines-2d": "https://github.com/isirode/DrawingLines2D.git?path=/Assets/Isirode/DrawingLines2D#0.0.3",
     "com.isirode.liquid-simulation-extension": "https://github.com/isirode/LiquidSimulationExtension.git?path=/Assets/Isirode/LiquidSimulationExtension#0.0.8",
     "com.isirode.unity-2d-controllers": "https://github.com/isirode/Unity2DControllers.git?path=/Assets/Isirode/Unity2DControllers#0.0.1",
+    "com.isirode.unity-utils": "https://github.com/isirode/UnityUtils.git?path=/Assets/Isirode/UnityUtils#0.0.2",
     "com.unity.collab-proxy": "1.17.2",
     "com.unity.feature.2d": "1.0.0",
     "com.unity.ide.rider": "3.0.15",

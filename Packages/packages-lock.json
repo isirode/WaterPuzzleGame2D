@@ -36,6 +36,13 @@
       },
       "hash": "c619b323979853033902ba23e1ee7d782fc8855d"
     },
+    "com.isirode.unity-utils": {
+      "version": "https://github.com/isirode/UnityUtils.git?path=/Assets/Isirode/UnityUtils#0.0.2",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "3772b158fb94cc441277cb75877a0b77664e027f"
+    },
     "com.unity.2d.animation": {
       "version": "7.0.8",
       "depth": 1,
