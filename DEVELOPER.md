@@ -19,6 +19,11 @@ There is a list of features below which could be interesting.
   - [ ] Levels with length limiter
   - [ ] Levels with multiple lines 
 
+- [ ] Interactions
+  - [ ] Gravity modifier
+  - [ ] Thread you can pull
+  - [ ] UI pencils
+
 - [ ] Utilities
   - [ ] Move them in another repository when appropriate
   - [ ] Find a MonoBehaviour in scene, assign it
